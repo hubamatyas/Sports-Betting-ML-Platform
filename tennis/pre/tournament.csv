@@ -1,0 +1,11 @@
+tournament_id,tournament_name,tournament_startDate,tournament_endDate,tournament_type,tournament_drawSize,tournament_matchType,tournament_gender,tournament_status,tournament_cityName,tournament_winningPeopleId,tournament_winningPeople,tournament_totalPrizeMoney,tournament_totalPrizeCurrency,tournament_winnerPrizeMoney,competition_id,competition_name,competition_areaId,competition_areaName,competition_court,tourCalendar_id,tourCalendar_startDate,tourCalendar_endDate,tourCalendar_name
+4ol2edkys32gnka6cisy99y50,Open Internacional Femení Solgironès 2023,2023-06-05Z,2023-06-11Z,WTA 125K Series,16,Single,Women,Completed,La Bisbal d'Empordà,f3em1jc7n1a1kkxyowok3psjz,Arantxa Rus,115000,USD,15000,1brqg21jvopb168sqs679im8k,Open Internacional Femení Solgironès,49ih1pwv3ahshdf8uzrimi54c,Spain,Clay,agrjetbopk5rzgf32nttp2olw,2022-12-28Z,2023-12-17Z,"WTA
+            Tour 2023"
+2p91bt35s3pomxdmds1qwusyc,Prudential Hong Kong Tennis Open 2023,2023-10-07Z,2023-10-15Z,WTA 250,16,Single,Women,Completed,Hong Kong,7moy2bknnjrhnzj6aqam9m1ka,Leylah Fernandez,259303,USD,34228,7cbwz0fvtd5nk66e1cjbbesx5,Prudential Hong Kong Tennis Open,5mqvtybzlyttafefvps14mvt3,"Hong Kong, China",Hard,agrjetbopk5rzgf32nttp2olw,2022-12-28Z,2023-12-17Z,"WTA
+            Tour 2023"
+6ng6os5jl1giouu3o3ta39puc,Creand-Andorrà Open 2023,2023-11-27Z,2023-12-03Z,WTA 125K Series,16,Single,Women,Completed,Andorra,8x263ek8jqh58zf0zxhk655re,Marina  Bassols Ribera,115000,USD,13040,9s0mm9yn29hi1m9yq32lcry8k,Creand-Andorrà Open,6kxfttvbfkg4ywupx6g9zc16o,Andorra,Hard,agrjetbopk5rzgf32nttp2olw,2022-12-28Z,2023-12-17Z,"WTA
+            Tour 2023"
+cf1b20irgpkd7l6a0ipgz7nkk,Hungarian Grand Prix 2023,2023-07-15Z,2023-07-23Z,WTA 250,16,Single,Women,Completed,Budapest,azqjlao8phquoemoac541in10,Maria Timofeeva,259303,USD,29760,7c8mlhy1vgf8xomjvd5gssgyx,Hungarian Grand Prix,1vy5vlux7mj2r7r9ktd71hhpo,Hungary,Clay,agrjetbopk5rzgf32nttp2olw,2022-12-28Z,2023-12-17Z,"WTA
+            Tour 2023"
+434n4mbnj35pvwmvmvubmd0k4,Guadalajara Open Akron presented by Santander 2023,2023-09-15Z,2023-09-24Z,WTA 1000,32,Single,Women,Completed,Guadalajara,256btrjadjxrvoj69phzas7he,Maria Sakkari,2788468,USD,454500,az768y87fk27txvffv4hcbpjo,Guadalajara Open Akron presented by Santander,5trdr3jf42i20zj1hnkvcytr6,Mexico,Hard,agrjetbopk5rzgf32nttp2olw,2022-12-28Z,2023-12-17Z,"WTA
+            Tour 2023"
