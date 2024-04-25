@@ -6,7 +6,7 @@ from pymongo.collection import Collection
 from pymongo.database import Database
 from gridfs.errors import FileExists
 from pymongo.errors import DuplicateKeyError
-from enums import MongoURIs
+from exchange.enums import MongoURIs
 from enum import Enum
 import concurrent.futures
 import multiprocessing

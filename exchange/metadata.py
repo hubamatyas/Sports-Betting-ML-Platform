@@ -1,6 +1,6 @@
 import pandas as pd
 from datetime import datetime
-from query_utils import MarketType
+from queries.query_utils import MarketType
 import copy
 import re
 

@@ -1,0 +1,679 @@
+[
+    {
+      "$sample": {
+        "size": 1000
+      }
+    },
+    {
+      "$match": {
+        "metadata": "1.207324870"
+      }
+    },
+    {
+      "$match": {
+        "pt": {
+          "$gte": {
+            "$date": "2023-01-01T14:00:00Z"
+          },
+          "$lt": {
+            "$date": "2023-01-01T15:35:00Z"
+          }
+        }
+      }
+    },
+    {
+      "$addFields": {
+        "__alias_0": {
+          "$arrayElemAt": [
+            {
+              "$switch": {
+                "branches": [
+                  {
+                    "case": {
+                      "$isArray": {
+                        "$map": {
+                          "input": "$runners.48224.atb",
+                          "as": "value",
+                          "in": {
+                            "$arrayElemAt": [
+                              {
+                                "$switch": {
+                                  "branches": [
+                                    {
+                                      "case": {
+                                        "$isArray": "$$value"
+                                      },
+                                      "then": "$$value"
+                                    },
+                                    {
+                                      "case": {
+                                        "$in": [
+                                          {
+                                            "$type": "$$value"
+                                          },
+                                          [
+                                            "null",
+                                            "missing",
+                                            "object"
+                                          ]
+                                        ]
+                                      },
+                                      "then": []
+                                    }
+                                  ],
+                                  "default": [
+                                    "$$value"
+                                  ]
+                                }
+                              },
+                              0
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    "then": {
+                      "$map": {
+                        "input": "$runners.48224.atb",
+                        "as": "value",
+                        "in": {
+                          "$arrayElemAt": [
+                            {
+                              "$switch": {
+                                "branches": [
+                                  {
+                                    "case": {
+                                      "$isArray": "$$value"
+                                    },
+                                    "then": "$$value"
+                                  },
+                                  {
+                                    "case": {
+                                      "$in": [
+                                        {
+                                          "$type": "$$value"
+                                        },
+                                        [
+                                          "null",
+                                          "missing",
+                                          "object"
+                                        ]
+                                      ]
+                                    },
+                                    "then": []
+                                  }
+                                ],
+                                "default": [
+                                  "$$value"
+                                ]
+                              }
+                            },
+                            0
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "case": {
+                      "$in": [
+                        {
+                          "$type": {
+                            "$map": {
+                              "input": "$runners.48224.atb",
+                              "as": "value",
+                              "in": {
+                                "$arrayElemAt": [
+                                  {
+                                    "$switch": {
+                                      "branches": [
+                                        {
+                                          "case": {
+                                            "$isArray": "$$value"
+                                          },
+                                          "then": "$$value"
+                                        },
+                                        {
+                                          "case": {
+                                            "$in": [
+                                              {
+                                                "$type": "$$value"
+                                              },
+                                              [
+                                                "null",
+                                                "missing",
+                                                "object"
+                                              ]
+                                            ]
+                                          },
+                                          "then": []
+                                        }
+                                      ],
+                                      "default": [
+                                        "$$value"
+                                      ]
+                                    }
+                                  },
+                                  0
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        [
+                          "null",
+                          "missing",
+                          "object"
+                        ]
+                      ]
+                    },
+                    "then": []
+                  }
+                ],
+                "default": [
+                  {
+                    "$map": {
+                      "input": "$runners.48224.atb",
+                      "as": "value",
+                      "in": {
+                        "$arrayElemAt": [
+                          {
+                            "$switch": {
+                              "branches": [
+                                {
+                                  "case": {
+                                    "$isArray": "$$value"
+                                  },
+                                  "then": "$$value"
+                                },
+                                {
+                                  "case": {
+                                    "$in": [
+                                      {
+                                        "$type": "$$value"
+                                      },
+                                      [
+                                        "null",
+                                        "missing",
+                                        "object"
+                                      ]
+                                    ]
+                                  },
+                                  "then": []
+                                }
+                              ],
+                              "default": [
+                                "$$value"
+                              ]
+                            }
+                          },
+                          0
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            0
+          ]
+        }
+      }
+    },
+    {
+      "$addFields": {
+        "__alias_1": {
+          "$arrayElemAt": [
+            {
+              "$switch": {
+                "branches": [
+                  {
+                    "case": {
+                      "$isArray": {
+                        "$map": {
+                          "input": "$runners.58805.atb",
+                          "as": "value",
+                          "in": {
+                            "$arrayElemAt": [
+                              {
+                                "$switch": {
+                                  "branches": [
+                                    {
+                                      "case": {
+                                        "$isArray": "$$value"
+                                      },
+                                      "then": "$$value"
+                                    },
+                                    {
+                                      "case": {
+                                        "$in": [
+                                          {
+                                            "$type": "$$value"
+                                          },
+                                          [
+                                            "null",
+                                            "missing",
+                                            "object"
+                                          ]
+                                        ]
+                                      },
+                                      "then": []
+                                    }
+                                  ],
+                                  "default": [
+                                    "$$value"
+                                  ]
+                                }
+                              },
+                              0
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    "then": {
+                      "$map": {
+                        "input": "$runners.58805.atb",
+                        "as": "value",
+                        "in": {
+                          "$arrayElemAt": [
+                            {
+                              "$switch": {
+                                "branches": [
+                                  {
+                                    "case": {
+                                      "$isArray": "$$value"
+                                    },
+                                    "then": "$$value"
+                                  },
+                                  {
+                                    "case": {
+                                      "$in": [
+                                        {
+                                          "$type": "$$value"
+                                        },
+                                        [
+                                          "null",
+                                          "missing",
+                                          "object"
+                                        ]
+                                      ]
+                                    },
+                                    "then": []
+                                  }
+                                ],
+                                "default": [
+                                  "$$value"
+                                ]
+                              }
+                            },
+                            0
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "case": {
+                      "$in": [
+                        {
+                          "$type": {
+                            "$map": {
+                              "input": "$runners.58805.atb",
+                              "as": "value",
+                              "in": {
+                                "$arrayElemAt": [
+                                  {
+                                    "$switch": {
+                                      "branches": [
+                                        {
+                                          "case": {
+                                            "$isArray": "$$value"
+                                          },
+                                          "then": "$$value"
+                                        },
+                                        {
+                                          "case": {
+                                            "$in": [
+                                              {
+                                                "$type": "$$value"
+                                              },
+                                              [
+                                                "null",
+                                                "missing",
+                                                "object"
+                                              ]
+                                            ]
+                                          },
+                                          "then": []
+                                        }
+                                      ],
+                                      "default": [
+                                        "$$value"
+                                      ]
+                                    }
+                                  },
+                                  0
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        [
+                          "null",
+                          "missing",
+                          "object"
+                        ]
+                      ]
+                    },
+                    "then": []
+                  }
+                ],
+                "default": [
+                  {
+                    "$map": {
+                      "input": "$runners.58805.atb",
+                      "as": "value",
+                      "in": {
+                        "$arrayElemAt": [
+                          {
+                            "$switch": {
+                              "branches": [
+                                {
+                                  "case": {
+                                    "$isArray": "$$value"
+                                  },
+                                  "then": "$$value"
+                                },
+                                {
+                                  "case": {
+                                    "$in": [
+                                      {
+                                        "$type": "$$value"
+                                      },
+                                      [
+                                        "null",
+                                        "missing",
+                                        "object"
+                                      ]
+                                    ]
+                                  },
+                                  "then": []
+                                }
+                              ],
+                              "default": [
+                                "$$value"
+                              ]
+                            }
+                          },
+                          0
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            0
+          ]
+        }
+      }
+    },
+    {
+      "$addFields": {
+        "__alias_2": {
+          "$arrayElemAt": [
+            {
+              "$switch": {
+                "branches": [
+                  {
+                    "case": {
+                      "$isArray": {
+                        "$map": {
+                          "input": "$runners.63908.atb",
+                          "as": "value",
+                          "in": {
+                            "$arrayElemAt": [
+                              {
+                                "$switch": {
+                                  "branches": [
+                                    {
+                                      "case": {
+                                        "$isArray": "$$value"
+                                      },
+                                      "then": "$$value"
+                                    },
+                                    {
+                                      "case": {
+                                        "$in": [
+                                          {
+                                            "$type": "$$value"
+                                          },
+                                          [
+                                            "null",
+                                            "missing",
+                                            "object"
+                                          ]
+                                        ]
+                                      },
+                                      "then": []
+                                    }
+                                  ],
+                                  "default": [
+                                    "$$value"
+                                  ]
+                                }
+                              },
+                              0
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    "then": {
+                      "$map": {
+                        "input": "$runners.63908.atb",
+                        "as": "value",
+                        "in": {
+                          "$arrayElemAt": [
+                            {
+                              "$switch": {
+                                "branches": [
+                                  {
+                                    "case": {
+                                      "$isArray": "$$value"
+                                    },
+                                    "then": "$$value"
+                                  },
+                                  {
+                                    "case": {
+                                      "$in": [
+                                        {
+                                          "$type": "$$value"
+                                        },
+                                        [
+                                          "null",
+                                          "missing",
+                                          "object"
+                                        ]
+                                      ]
+                                    },
+                                    "then": []
+                                  }
+                                ],
+                                "default": [
+                                  "$$value"
+                                ]
+                              }
+                            },
+                            0
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "case": {
+                      "$in": [
+                        {
+                          "$type": {
+                            "$map": {
+                              "input": "$runners.63908.atb",
+                              "as": "value",
+                              "in": {
+                                "$arrayElemAt": [
+                                  {
+                                    "$switch": {
+                                      "branches": [
+                                        {
+                                          "case": {
+                                            "$isArray": "$$value"
+                                          },
+                                          "then": "$$value"
+                                        },
+                                        {
+                                          "case": {
+                                            "$in": [
+                                              {
+                                                "$type": "$$value"
+                                              },
+                                              [
+                                                "null",
+                                                "missing",
+                                                "object"
+                                              ]
+                                            ]
+                                          },
+                                          "then": []
+                                        }
+                                      ],
+                                      "default": [
+                                        "$$value"
+                                      ]
+                                    }
+                                  },
+                                  0
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        [
+                          "null",
+                          "missing",
+                          "object"
+                        ]
+                      ]
+                    },
+                    "then": []
+                  }
+                ],
+                "default": [
+                  {
+                    "$map": {
+                      "input": "$runners.63908.atb",
+                      "as": "value",
+                      "in": {
+                        "$arrayElemAt": [
+                          {
+                            "$switch": {
+                              "branches": [
+                                {
+                                  "case": {
+                                    "$isArray": "$$value"
+                                  },
+                                  "then": "$$value"
+                                },
+                                {
+                                  "case": {
+                                    "$in": [
+                                      {
+                                        "$type": "$$value"
+                                      },
+                                      [
+                                        "null",
+                                        "missing",
+                                        "object"
+                                      ]
+                                    ]
+                                  },
+                                  "then": []
+                                }
+                              ],
+                              "default": [
+                                "$$value"
+                              ]
+                            }
+                          },
+                          0
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            0
+          ]
+        }
+      }
+    },
+    {
+      "$group": {
+        "_id": {
+          "__alias_3": "$pt",
+          "__alias_0": "$__alias_0",
+          "__alias_1": "$__alias_1",
+          "__alias_2": "$__alias_2"
+        }
+      }
+    },
+    {
+      "$project": {
+        "_id": 0,
+        "__alias_3": "$_id.__alias_3",
+        "__alias_0": "$_id.__alias_0",
+        "__alias_1": "$_id.__alias_1",
+        "__alias_2": "$_id.__alias_2"
+      }
+    },
+    {
+      "$project": {
+        "x": "$__alias_3",
+        "y": "$__alias_0",
+        "y_series_0": "$__alias_1",
+        "y_series_1": "$__alias_2",
+        "_id": 0
+      }
+    },
+    {
+      "$addFields": {
+        "__multi_series": {
+          "$objectToArray": {
+            "The Draw": "$y_series_0",
+            "Aston Villa": "$y_series_1",
+            "Tottenham": "$y"
+          }
+        }
+      }
+    },
+    {
+      "$unwind": "$__multi_series"
+    },
+    {
+      "$addFields": {
+        "color": "$__multi_series.k",
+        "y": "$__multi_series.v"
+      }
+    },
+    {
+      "$project": {
+        "__multi_series": 0,
+        "y_series_0": 0,
+        "y_series_1": 0
+      }
+    },
+    {
+      "$limit": 50000
+    }
+  ]

@@ -1,5 +1,5 @@
-from mongo import MongoDB
-from enums import MongoURIs, Databases, Collections
+from interface.mongo import MongoDB
+from exchange.enums import MongoURIs, Databases, Collections
 from query_utils import MarketType
 
 mongo_client = MongoDB(Databases.HorseRacing, MongoURIs.Test)

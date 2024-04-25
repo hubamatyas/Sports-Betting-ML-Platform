@@ -1,0 +1,176 @@
+[
+    {
+      "$sample": {
+        "size": 1000
+      }
+    },
+    {
+      "$match": {
+        "metadata": "1.207324870"
+      }
+    },
+    {
+      "$match": {
+        "pt": {
+          "$gte": {
+            "$date": "2023-01-01T13:30:00Z"
+          },
+          "$lt": {
+            "$date": "2023-01-01T15:30:00Z"
+          }
+        }
+      }
+    },
+    {
+      "$addFields": {
+        "__alias_0": {
+          "$sum": {
+            "$map": {
+              "input": "$runners.48224.atb",
+              "as": "value",
+              "in": {
+                "$arrayElemAt": [
+                  {
+                    "$switch": {
+                      "branches": [
+                        {
+                          "case": {
+                            "$isArray": "$$value"
+                          },
+                          "then": "$$value"
+                        },
+                        {
+                          "case": {
+                            "$in": [
+                              {
+                                "$type": "$$value"
+                              },
+                              [
+                                "null",
+                                "missing",
+                                "object"
+                              ]
+                            ]
+                          },
+                          "then": []
+                        }
+                      ],
+                      "default": [
+                        "$$value"
+                      ]
+                    }
+                  },
+                  1
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "$addFields": {
+        "__alias_1": {
+          "$sum": {
+            "$map": {
+              "input": "$runners.48224.atl",
+              "as": "value",
+              "in": {
+                "$arrayElemAt": [
+                  {
+                    "$switch": {
+                      "branches": [
+                        {
+                          "case": {
+                            "$isArray": "$$value"
+                          },
+                          "then": "$$value"
+                        },
+                        {
+                          "case": {
+                            "$in": [
+                              {
+                                "$type": "$$value"
+                              },
+                              [
+                                "null",
+                                "missing",
+                                "object"
+                              ]
+                            ]
+                          },
+                          "then": []
+                        }
+                      ],
+                      "default": [
+                        "$$value"
+                      ]
+                    }
+                  },
+                  1
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "$group": {
+        "_id": {
+          "__alias_2": "$pt",
+          "__alias_3": "$runners.48224.ttrdv",
+          "__alias_0": "$__alias_0",
+          "__alias_1": "$__alias_1"
+        }
+      }
+    },
+    {
+      "$project": {
+        "_id": 0,
+        "__alias_2": "$_id.__alias_2",
+        "__alias_3": "$_id.__alias_3",
+        "__alias_0": "$_id.__alias_0",
+        "__alias_1": "$_id.__alias_1"
+      }
+    },
+    {
+      "$project": {
+        "x": "$__alias_2",
+        "y": "$__alias_3",
+        "y_series_0": "$__alias_0",
+        "y_series_1": "$__alias_1",
+        "_id": 0
+      }
+    },
+    {
+      "$addFields": {
+        "__multi_series": {
+          "$objectToArray": {
+            "Back Side": "$y_series_0",
+            "Lay Side": "$y_series_1",
+            "Total Traded Volume": "$y"
+          }
+        }
+      }
+    },
+    {
+      "$unwind": "$__multi_series"
+    },
+    {
+      "$addFields": {
+        "color": "$__multi_series.k",
+        "y": "$__multi_series.v"
+      }
+    },
+    {
+      "$project": {
+        "__multi_series": 0,
+        "y_series_0": 0,
+        "y_series_1": 0
+      }
+    },
+    {
+      "$limit": 50000
+    }
+  ]

@@ -1,6 +1,6 @@
-from mongo import MongoDB
-from enums import MongoURIs, Databases, Collections
-from mongo import MongoDB
+from interface.mongo import MongoDB
+from exchange.enums import MongoURIs, Databases, Collections
+from interface.mongo import MongoDB
 from sqlalchemy import create_engine
 import pandas as pd
 from query_utils import FootystatsToBetfair
