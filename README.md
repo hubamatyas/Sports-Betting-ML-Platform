@@ -3,6 +3,9 @@
 ## Overview
 This project integrates various types of sports data — pre-game, in-play, and exchange data — to facilitate sophisticated model building and in-depth analysis in sports betting. The code corresponds to Chapter 3 (Experiment 1) in the BSc Computer Science thesis titled 'Algorithmic Sports Arbitrage Using Statistical Machine Learning'. The rich data integration supports the development of robust betting strategies and enhances the backtesting process.
 
+## Setup
+Clone the repository and run `pip install -r requirements.txt` to install dependencies. Run the following commands: `pip install pipreqs` and `pipreqs --force` inside qst-reserach to generate requirements.txt file and update dependencies during development. To run the MongoDB and AWS pipeline, run `main.py`.
+
 ### Data Integration
 The platform combines data from multiple sources:
 - **Pre-game Data**: Offers a historical view and key stats, essential for building predictive models before games start.
